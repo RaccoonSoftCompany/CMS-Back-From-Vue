@@ -18,16 +18,7 @@
         <span slot="title">{{ menu.meta.title }}</span>
       </el-menu-item>
     </div>
-    <div class="profile-details">
-        <div class="profile-content">
-          <img src="./image/史努比.jpg" alt="profile" />
-        </div>
-        <div class="name-job">
-          <div class="profile_name">Bruse Lee</div>
-          <div class="job">Web Desginer</div>
-        </div>
-        <!-- <i class="bx bx-log-out" style="color:white"></i> -->
-      </div>
+
   </div>
 </template>
 
@@ -48,7 +39,7 @@ export default {
 i {
   font-size: 30px;
 }
-.profile-details{
+/* .profile-details{
   position: fixed;
   bottom: 0;
   width: 260px;
@@ -96,5 +87,5 @@ i {
 }
 .profile-details .job {
   font-size: 15px;
-}
+} */
 </style>

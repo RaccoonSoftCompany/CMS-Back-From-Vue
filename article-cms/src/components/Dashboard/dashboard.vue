@@ -32,7 +32,7 @@ export default {
       ]);
 
       option = {
-        backgroundColor: "#dff9fb",
+        backgroundColor: "#ffffff",
         tooltip: {
           formatter: "{a} <br/>{b} : {c}%",
         },

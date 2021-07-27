@@ -9,14 +9,14 @@ import * as echarts from 'echarts'
 import VueQuillEditor from 'vue-quill-editor'
 
 
-
 Vue.prototype.$axios = axios;
 Vue.prototype.$echarts = echarts
 Vue.prototype.$confirm = MessageBox.confirm
 Vue.config.productionTip = false
 
 Vue.use(ElementUI);
-Vue.use(VueQuillEditor)
+Vue.use(VueQuillEditor);
+
 
 new Vue({
   router,

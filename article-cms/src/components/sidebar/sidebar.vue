@@ -3,9 +3,9 @@
     <el-menu
       default-active="1"
       class="el-menu-vertical-demo"
-      background-color="#c7ecee"
-      text-color="#182C61"
-      active-text-color="#2e86de"
+      background-color="#343A40"
+      text-color="#ffffff"
+      active-text-color="#0984e3"
       router
       :collapse="collapse"
     >

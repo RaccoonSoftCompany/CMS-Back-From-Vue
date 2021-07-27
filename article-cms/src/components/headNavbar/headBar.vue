@@ -204,6 +204,7 @@ export default {
 .uName {
   font-family: fantasy;
   font-size: 15px;
+  color: #ffffff;
 }
 
 .el-dialog--center .el-dialog__body {

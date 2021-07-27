@@ -41,7 +41,7 @@
 import Cookies from 'js-cookie'
 import {comeLogin} from '../../api/user'
 import { setToken } from '../../utils/auth'
-import md5 from 'js-md5'
+// import md5 from 'js-md5'
 export default {
   name: "Login",
   data() {
@@ -66,12 +66,12 @@ export default {
 
     // 登录请求
     toLogin() {
-      let mdpassword=md5(this.loginForm.password);
-      console.log(mdpassword);
+      // let mdpassword=md5(this.loginForm.password);
+      // console.log(mdpassword);
       
       let data = {
         username: this.loginForm.username,
-        password: mdpassword,
+        password: this.loginForm.password,
       };
         Cookies.set('username',this.loginForm.username)
         Cookies.set('password',this.loginForm.password)

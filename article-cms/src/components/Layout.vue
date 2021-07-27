@@ -9,7 +9,7 @@
           <a href="#"
             ><i class="bx bx-menu" :class="iconTurn" @click="handleCollapse"></i
           ></a>
-          <el-breadcrumb separator-class="el-icon-arrow-right">
+          <!-- <el-breadcrumb separator-class="el-icon-arrow-right">
             <el-breadcrumb-item :to="{ path: '/dashboard' }"
               >仪表盘</el-breadcrumb-item
             >
@@ -22,7 +22,7 @@
             <el-breadcrumb-item :to="{ path: '/personalCenter/profile' }"
               >个人信息</el-breadcrumb-item
             >
-          </el-breadcrumb>
+          </el-breadcrumb> -->
           <header-bar></header-bar>
         </el-header>
         <el-main>
@@ -91,7 +91,7 @@ export default {
     },
     asideStyle() {
       return {
-        width: this.isCollapse ? "auto" : "200px",
+        width: this.isCollapse ? "auto" : "180px",
       };
     },
     iconTurn() {
@@ -111,31 +111,31 @@ body {
 .header {
   display: flex;
   align-items: center;
-  background-color: #c7ecee;
+  background-color: #343A40;
   justify-content: space-between;
   /* overflow: unset; */
   position: relative;
-  box-shadow: 0px 1px 0px 0px #badc58;
+  box-shadow: 0px 1px 0px 0px #ffffff;
 }
 .aside {
-  box-shadow: 0.2px 0px 0px 0px #badc58;
+  box-shadow: 0.2px 0px 0px 0px #ffffff;
 }
 .el-main {
-  background-color: #dff9fb;
+  background-color: #ffffff;
   min-height: calc(100vh - 120px);
 }
 .el-footer {
-  background-color: #c7ecee;
+  background-color: #343A40;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: fantasy;
   font-size: 23px;
-  color: black;
-  box-shadow: 0px -1px 0px 0px #badc58;
+  color: #ffffff;
+  box-shadow: 0px -1px 0px 0px #ffffff;
 }
 .bx-menu {
-  color: black;
+  color: #ffffff;
   font-size: 35px;
   margin: 0 5px;
   cursor: pointer;

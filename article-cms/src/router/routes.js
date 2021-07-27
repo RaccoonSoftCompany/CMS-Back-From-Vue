@@ -10,7 +10,7 @@ let routes = [
         meta: {
             title: "根目录",
             icon: 'bx bx-notification',
-            style: 'color:#181818',
+            style: 'color:#ffffff',
             // hidden: true,
         },
         children: [
@@ -20,7 +20,7 @@ let routes = [
                 meta: {
                     title: "仪表盘",
                     icon: 'bx bxs-dashboard',
-                    style: 'color:#181818'
+                    style: 'color:#ffffff'
                 },
                 component: () => import('../components/Dashboard/dashboard')
             },
@@ -29,8 +29,8 @@ let routes = [
                 name: 'home',
                 meta: {
                     title: "首页",
-                    icon: 'bx bxl-spring-boot',
-                    style: 'color:#181818'
+                    icon: 'bx bx-window',
+                    style: 'color:#ffffff'
                 },
                 component: () => import('../components/sidebar/home'),
                 beforeEnter(to, from, next) {
@@ -39,28 +39,43 @@ let routes = [
                 }
             },
             {
-                path:'carousel',
-                name:'carousel',
-                meta:{
-                    title:"轮播图管理",
-                    icon:'bx bx-slideshow',
-                    style:'color:#ffffff'
-                },
-                component:()=>import('../components/sidebar/carousel')
-            },
-            {
-                path: 'log',
-                name: 'log',
+                path: 'carousel',
+                name: 'carousel',
                 meta: {
-                    title: "日志中心",
-                    icon: 'bx bxl-blogger',
-                    style: 'color:#181818'
+                    title: "轮播图管理",
+                    icon: 'bx bx-slideshow',
+                    style: 'color:#ffffff'
                 },
-                component: () => import('../components/sidebar/log')
+                component: () => import('../components/sidebar/carousel')
             },
+            // {
+            //     path: 'log',
+            //     name: 'log',
+            //     meta: {
+            //         title: "日志中心",
+            //         icon: 'bx bxl-blogger',
+            //         style: 'color:#ffffff'
+            //     },
+            //     component: () => import('../components/sidebar/log')
+            // },
 
         ],
     },
+    // {
+    //     path: '/Article',
+    //     // name: 'Article',
+    //     component: Layout,
+    //     children: [{
+    //         path:'Article',
+    //         name:'Article',
+    //         meta: {
+    //             title: "文章管理",
+    //             icon: 'bx bx-chart',
+    //             style: 'color:#ffffff'
+    //         },
+    //         component: () => import('../components/views/Article')
+    //     }]
+    // },
     {
         // path: '/authController',
         // component: Layout,
@@ -76,8 +91,8 @@ let routes = [
         component: Layout,
         meta: {
             title: "用户管理",
-            icon: 'bx bx-confused',
-            style: 'color:#181818'
+            icon: 'bx bx-user-pin',
+            style: 'color:#ffffff'
         },
         children: [
             {
@@ -86,7 +101,7 @@ let routes = [
                 meta: {
                     title: "用户列表",
                     icon: 'bx bxs-user-detail',
-                    style: 'color:#181818'
+                    style: 'color:#ffffff'
                 },
                 component: userList,
                 beforeEnter(to, from, next) {
@@ -95,14 +110,14 @@ let routes = [
                 }
             },
             {
-                path: 'addUser',
-                name: 'addUser',
+                path: 'problemList',
+                name: 'problemList',
                 meta: {
-                    title: "添加用户",
-                    icon: 'bx bxs-user-plus',
-                    style: 'color:#181818'
+                    title: "问题列表",
+                    icon: 'bx bx-help-circle',
+                    style: 'color:#ffffff'
                 },
-                component: () => import('../components/authController/userController/addUser')
+                component: () => import('../components/authController/userController/problemList')
             }
         ]
         // }
@@ -115,7 +130,7 @@ let routes = [
         meta: {
             title: "个人中心",
             icon: 'bx bx-user',
-            style: 'color:#181818',
+            style: 'color:#ffffff',
 
         },
         children: [
@@ -124,8 +139,8 @@ let routes = [
                 name: 'profile',
                 meta: {
                     title: "个人信息",
-                    icon: 'bx bx-id-card bx-tada',
-                    style: 'color:#181818'
+                    icon: 'bx bx-id-card',
+                    style: 'color:#ffffff'
                 },
                 component: () => import('../components/personalCenter/profile')
             },
@@ -134,12 +149,21 @@ let routes = [
                 name: 'resetPwd',
                 meta: {
                     title: "密码更改",
-                    icon: 'bx bxs-skull bx-burst',
-                    style: 'color:#181818'
+                    icon: 'bx bx-wrench',
+                    style: 'color:#ffffff'
                 },
                 component: () => import('../components/personalCenter/resetPwd')
             },
         ]
+    },
+    {
+        path: 'QRCode',
+        name: 'QRCode',
+        meta: {
+            title: "二维码管理",
+            icon: 'bx bx-qr-scan',
+            style: 'color:#ffffff'
+        },
     },
     {
         path: '/Login',
