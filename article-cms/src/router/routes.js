@@ -61,21 +61,26 @@ let routes = [
 
         ],
     },
-    // {
-    //     path: '/Article',
-    //     // name: 'Article',
-    //     component: Layout,
-    //     children: [{
-    //         path:'Article',
-    //         name:'Article',
-    //         meta: {
-    //             title: "文章管理",
-    //             icon: 'bx bx-chart',
-    //             style: 'color:#ffffff'
-    //         },
-    //         component: () => import('../components/views/Article')
-    //     }]
-    // },
+    {
+        path: '/Article',
+        component: Layout,
+        meta: {
+            title: "文章管理",
+            icon: 'bx bx-chart',
+            style: 'color:#ffffff'
+
+        },
+        children: [{
+            path: 'ArticleContent',
+            name: 'ArticleContent',
+            meta: {
+                title: "文章内容",
+                icon: 'bx bx-slideshow',
+                style: 'color:#ffffff'
+            },
+            component: () => import('../components/views/ArticleContent')
+        }]
+    },
     {
         // path: '/authController',
         // component: Layout,
@@ -157,13 +162,52 @@ let routes = [
         ]
     },
     {
-        path: 'QRCode',
-        name: 'QRCode',
+        path: '/webSystem',
+        component: Layout,
         meta: {
-            title: "二维码管理",
-            icon: 'bx bx-qr-scan',
+            title: "网站管理",
+            icon: 'bx bx-wrench',
             style: 'color:#ffffff'
         },
+        children: [{
+            path: 'QRCode',
+            name: 'QRCode',
+            meta: {
+                title: "二维码管理",
+                icon: 'bx bx-scan',
+                style: 'color:#ffffff'
+            },
+            component: () => import('../components/views/QRCode')
+        },
+        {
+            path: 'webInfo',
+            name: 'webInfo',
+            meta: {
+                title: "网站信息",
+                icon: 'bx bx-planet',
+                style: 'color:#ffffff'
+            },
+            component: () => import('../components/views/webInfo')
+        },
+        {
+            path: 'support',
+            name: 'support',
+            meta: {
+                title: "支持我们",
+                icon: 'bx bx-like',
+                style: 'color:#ffffff'
+            },
+            component: () => import('../components/views/support')
+        },
+        ]
+        // path: 'QRCode',
+        // name: 'QRCode',
+        // meta: {
+        //     title: "二维码管理",
+        //     icon: 'bx bx-qr-scan',
+        //     style: 'color:#ffffff'
+        // },
+        // component: () => import('../components/views/QRCode')
     },
     {
         path: '/Login',

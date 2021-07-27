@@ -121,18 +121,18 @@ body {
   box-shadow: 0.2px 0px 0px 0px #ffffff;
 }
 .el-main {
-  background-color: #ffffff;
+  background-color: #D7D7D7;
   min-height: calc(100vh - 120px);
 }
 .el-footer {
-  background-color: #343A40;
+  background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: fantasy;
   font-size: 23px;
-  color: #ffffff;
-  box-shadow: 0px -1px 0px 0px #ffffff;
+  color: #8e97a1;
+  box-shadow: 1px -1px 0px 0px #ffffff;
 }
 .bx-menu {
   color: #ffffff;

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import routes from './routes'
-import NProgress from 'nprogress'
+// import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 import { isLogin } from '../utils/auth'
 Vue.use(VueRouter)
@@ -32,13 +32,13 @@ router.beforeEach((to, from, next) => {
             next('/login')
         }
     }
-    NProgress.start();
+    // NProgress.start();
     console.log("全局前置守卫");
     next()
 })
 
 router.afterEach(() => {
-    NProgress.done()
+    // NProgress.done()
     console.log("全局后置钩子");
 })
 
