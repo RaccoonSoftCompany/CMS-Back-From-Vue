@@ -7,7 +7,7 @@
       >
         <template slot="title">
           <i :class="menu.meta.icon" :style="menu.meta.style"></i>&nbsp;
-          <span>{{ menu.meta.title }}</span>
+          <span :class="menuTitleDisplay">{{ menu.meta.title }}</span>
         </template>
 
         <sidebar-item :menus="menu.children"></sidebar-item>
@@ -15,16 +15,24 @@
 
       <el-menu-item v-else :index="menu.path">
         <i :class="menu.meta.icon" :style="menu.meta.style"></i>&nbsp;
-        <span slot="title">{{ menu.meta.title }}</span>
+        <span :class="menuTitleDisplay" slot="title">{{
+          menu.meta.title
+        }}</span>
       </el-menu-item>
     </div>
-
   </div>
 </template>
 
 <script>
 export default {
   name: "sidebarItem",
+  data() {
+    return {
+      menuTitleDisplay: {
+        menu_title: this.collapse,
+      },
+    };
+  },
   props: {
     menus: {
       type: Array,
@@ -88,4 +96,10 @@ i {
 .profile-details .job {
   font-size: 15px;
 } */
+.el-menu--collapse span {
+  display: none;
+}
+.el-menu--collapse .el-submenu__icon-arrow {
+  display: none;
+}
 </style>

@@ -5,7 +5,7 @@
       ><!--  绑定指令,在methods里定义-->
       <span class="el-dropdown-link">
         <span class="uName"
-          >您好:&nbsp;&nbsp;&nbsp;&nbsp;{{ showUsername }}</span
+          > 您好:&nbsp;&nbsp;&nbsp;&nbsp;{{ showUsername }}</span
         >
         <i class="el-icon-arrow-down el-icon--right"></i>
       </span>
@@ -13,11 +13,11 @@
       <el-dropdown-menu slot="dropdown">
         <!-- icon是修改图标 ，command是点击后传给方法的值-->
         <el-dropdown-item icon="el-icon-edit" command="edit"
-          >>修改密码</el-dropdown-item
+          >修改密码</el-dropdown-item
         >
 
         <el-dropdown-item icon="el-icon-s-operation" command="quit"
-          >>退出登录</el-dropdown-item
+          >退出登录</el-dropdown-item
         >
       </el-dropdown-menu>
     </el-dropdown>

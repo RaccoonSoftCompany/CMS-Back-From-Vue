@@ -70,14 +70,15 @@ export default {
       // console.log(mdpassword);
       
       let data = {
-        username: this.loginForm.username,
-        password: this.loginForm.password,
+        UName: this.loginForm.username,
+        Upassword: this.loginForm.password,
       };
+      console.log(data);
         Cookies.set('username',this.loginForm.username)
         Cookies.set('password',this.loginForm.password)
       comeLogin(data).then((res) => {
         //所以此处打印的是用户状态信息
-        // console.log(res);
+        console.log(res);
         if (res.code === 200) {
           this.$message({
             message: "登陆成功!",

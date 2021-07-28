@@ -1,14 +1,16 @@
 <template>
   <div>
     <el-container>
-      <el-aside :style="asideStyle" class="aside">
-        <sidebar :menus="menus"> </sidebar>
+      <el-aside :style="{ width: isCollapse ? 'auto' : '200px' }" class="aside">
+        <sidebar :menus="menus" :collapse="isCollapse"> </sidebar>
       </el-aside>
-      <el-container>
-        <el-header class="header">
-          <a href="#"
-            ><i class="bx bx-menu" :class="iconTurn" @click="handleCollapse"></i
-          ></a>
+      <el-container class="container">
+        <el-header>
+          <i
+            class="bx bx-menu"
+            :class="isCollapse ? 'icon - Turn' : ''"
+            @click="handleCollapse"
+          ></i>
           <!-- <el-breadcrumb separator-class="el-icon-arrow-right">
             <el-breadcrumb-item :to="{ path: '/dashboard' }"
               >仪表盘</el-breadcrumb-item
@@ -89,11 +91,11 @@ export default {
       let newArr = this.resolve(routes);
       return newArr;
     },
-    asideStyle() {
-      return {
-        width: this.isCollapse ? "auto" : "180px",
-      };
-    },
+    // asideStyle() {
+    //   return {
+    //     width: isCollapse ? 'auto' : '200px'
+    //   };
+    // },
     iconTurn() {
       return {
         "icon-Turn": this.isCollapse ? true : "",
@@ -108,21 +110,24 @@ body {
   margin: 0;
 }
 
-.header {
+.el-header {
+  background-color: #343a40;
   display: flex;
   align-items: center;
-  background-color: #343A40;
   justify-content: space-between;
   /* overflow: unset; */
-  position: relative;
+  /* position: relative; */
   box-shadow: 0px 1px 0px 0px #ffffff;
 }
-.aside {
+/* .aside {
   box-shadow: 0.2px 0px 0px 0px #ffffff;
-}
+} */
 .el-main {
-  background-color: #D7D7D7;
+  background-color: #d7d7d7;
   min-height: calc(100vh - 120px);
+}
+.container {
+  height: 100vh;
 }
 .el-footer {
   background-color: #ffffff;
@@ -140,7 +145,17 @@ body {
   margin: 0 5px;
   cursor: pointer;
 }
+.el-icon-s-fold {
+  font-size: 1.5rem;
+}
 .icon-Turn {
   transform: rotate(90deg);
+}
+.el-dropdown-link {
+  cursor: pointer;
+  color: #409eff;
+}
+.el-icon-arrow-down {
+  font-size: 12px;
 }
 </style>

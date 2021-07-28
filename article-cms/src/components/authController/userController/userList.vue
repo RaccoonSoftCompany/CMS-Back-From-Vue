@@ -6,7 +6,7 @@
           v-model="searchText"
           class="search"
           placeholder="根据用户名查询..."
-        ></el-input>
+        ></el-input>  
         &nbsp;
         <el-button
           type="primary"
@@ -115,7 +115,7 @@
 </template>
 
 <script>
-import { GetList, deleteById, newUser, changeInfo } from "../../../api/user";
+import { GetList, deleteById, newUser, changeInfo,getAll } from "../../../api/user";
 import Vue from "vue";
 import AddUser from "./add.vue";
 import NProgress from "nprogress";
@@ -209,7 +209,7 @@ export default {
     },
     // 拉取数据方法
     fetchData(pager) {
-      GetList({pager})
+      getAll({pager})
         .then((data) => {
           console.log(pager);
           console.log(data);

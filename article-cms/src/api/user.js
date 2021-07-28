@@ -1,12 +1,16 @@
 import request from '../utils/request'
 
 export function comeLogin(data){
-    return request.post('api/login',data)
+    return request.post('/login',data)
 }
 
 // 删除
 export function deleteById(id) {
     return request.delete(`/user/${id}`)
+}
+
+export function getAll(){
+    return request.get('/users')
 }
 
 // 查询所有列表
@@ -33,6 +37,9 @@ export function changePassword(params) {
     return request.put('/user/changePwd',params)
 }
 
+export function getImg(){
+    return request.get('')
+}
 // 注销
 // export function logout(token){
 //     return request

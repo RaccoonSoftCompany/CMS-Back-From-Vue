@@ -11,6 +11,7 @@
 </template>
 
 <script>
+// import { getImg } from "../../api/user";
 export default {
   data() {
     return {
@@ -33,16 +34,19 @@ export default {
       ],
     };
   },
+  methods: {
+   
+  },
 };
 </script>
 
 <style>
-.img-box{
-    width: 100%;
+.img-box {
+  width: 100%;
 }
-img{
-    height: 100%;
-    /* width: 100%; */
+img {
+  height: 100%;
+  /* width: 100%; */
 }
 .el-carousel__item h3 {
   color: #475669;

@@ -32,7 +32,7 @@ let routes = [
                     icon: 'bx bx-window',
                     style: 'color:#ffffff'
                 },
-                component: () => import('../components/sidebar/home'),
+                component: () => import('../components/views/home'),
                 beforeEnter(to, from, next) {
                     console.log("首页路由独享的守卫：beforeEnter");
                     next();
@@ -46,7 +46,7 @@ let routes = [
                     icon: 'bx bx-slideshow',
                     style: 'color:#ffffff'
                 },
-                component: () => import('../components/sidebar/carousel')
+                component: () => import('../components/views/carousel')
             },
             // {
             //     path: 'log',
@@ -149,16 +149,16 @@ let routes = [
                 },
                 component: () => import('../components/personalCenter/profile')
             },
-            {
-                path: 'resetPwd',
-                name: 'resetPwd',
-                meta: {
-                    title: "密码更改",
-                    icon: 'bx bx-wrench',
-                    style: 'color:#ffffff'
-                },
-                component: () => import('../components/personalCenter/resetPwd')
-            },
+            // {
+            //     path: 'resetPwd',
+            //     name: 'resetPwd',
+            //     meta: {
+            //         title: "密码更改",
+            //         icon: 'bx bx-wrench',
+            //         style: 'color:#ffffff'
+            //     },
+            //     component: () => import('../components/personalCenter/resetPwd')
+            // },
         ]
     },
     {

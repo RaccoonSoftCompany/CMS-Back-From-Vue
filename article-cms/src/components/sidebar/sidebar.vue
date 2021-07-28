@@ -7,7 +7,9 @@
       text-color="#ffffff"
       active-text-color="#0984e3"
       router
+      unique-opened
       :collapse="collapse"
+      :collapse-transition="false"
     >
       <sidebarItem :menus="menus"></sidebarItem>
       
@@ -36,7 +38,7 @@ export default {
 
 <style scoped>
 .el-menu {
-  height: 100vh;
+  height: 100%;
   text-align: center;
   border-right: none;
    /* box-shadow: 0.2px 0px 0px 0px #badc58; */
